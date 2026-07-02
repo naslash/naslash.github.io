@@ -3,6 +3,14 @@ layout: default
 title: Home
 ---
 
+<div class="home-page">
+    <br><br>
+    <h2>Welcome to my Portfolio!</h2>
+    <h4>My name is Adam Nasla and I'm a software engineer.</h4>
+    <p>Learn more <a href="/aboutme" style="font-size: 24px;">About Me</a></p>
+    <p>Browse through my <a href="/projects" style="font-size: 24px;">Projects</a></p>
+</div>
+
 {% for post in paginator.posts %}
   {% include featured-post.html %}
 {% endfor %}
