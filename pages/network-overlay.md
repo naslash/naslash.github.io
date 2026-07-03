@@ -103,4 +103,23 @@ As shown in the output above, all three conditions for correctness, as previousl
 2. The cumulative sum of total sent messages across all MessagingNodes is equal to the cumulative sum of total received messages across all MessagingNodes, which is 250,000.
 3. The cumulative sum of sent integer payloads across all MessagingNodes is equal to the cumulative sum of received integer payloads across all MessagingNodes, which is 921216498979.00.
 
-This whole ```start``` process initially took minutes to complete, but I managed to bring it down to just a few seconds. I achieved this by adjusting how the sending and receiving of messages is synchronized in and between MessagingNodes.
+## Optimization
+
+The whole ```start``` process initially took minutes to complete, but I managed to bring it down to just a few seconds by adjusting how the sending and receiving of messages is synchronized in MessagingNode and Registry. I defined a ```synchronized``` method for each task that sends and receives [wire formats](#wire-formats) in the overlay, and they are the following:
+
+- In MessagingNode, ```synchronized void sendMessages(String[] route)``` sends 5 messages to the next node in the passed in route, where it is then relayed to its destination at the end of the route. A destination node is chosen at random from a HashMap that holds the route to each node in the minimum spanning tree.
+- In MessagingNode, ```synchronized void processPayload(String[] route, int payload)``` handles incoming payloads where it either relays the payload to the next node in the route, or adds the payload to its sum if the current receiving node is destination node.
+- In the Registry, ```syncrhonized void nodeTaskComplete()``` processes the received TASK_COMPLETE [wire formats](#wire-formats) sent by each MessagingNode after completing their last round of messages. Once all tasks are completed, this method first calls ```sleep()``` on the thread for 500 milliseconds to ensure all payloads have reached their destinations, and then sends a PULL_TRAFFIC_SUMMARY [wire format](#wire-formats) to request a traffic summary from each MessagingNode.
+- In the Registry, ```synchronized void addTrafficSummary(String nodeID)``` processes the received TRAFFIC_SUMMARY [wire formats](#wire-formats) sent by each MessagingNode, and after it processing the last one, it prints a summary report of all nodes as shown [above](#results).
+
+Once a TASK_INITIATE message is received by a MessagingNode, ```sendPayload()``` (screenshot below) is called to execute the message sending process, which is where the synchronized ```sendMessages(String[] route)``` method is called. Once the last round is executed, a TASK_COMPLETE [wire format](#wire-formats) is sent to the Registry, which executes its synchronized ```nodeTaskComplete()```.
+
+[![send](/assets/img/send-payload.png)](/assets/img/send-payload.png)
+
+A payload is sent and received in the form of a MESSAGE [wire format](#wire-formats).
+
+Any time a MessagingNode receives a payload, ```receivePayload()``` (screenshot below) is called to decode the incoming MESSAGE bits and pass its data to the synchronized ```processPayload()``` method.
+
+[![receive](/assets/img/receive-payload.png)](/assets/img/receive-payload.png)
+
+Implementing it this way allows a MessagingNode to continuously loop through rounds, sending messages while also processing payloads as they are received, without the two operations overlapping thanks to Java's synchronization mechanism.
