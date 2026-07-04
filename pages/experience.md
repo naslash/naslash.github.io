@@ -1,5 +1,5 @@
 ---
-layout: category
-title: Experience
-permalink: /experience
+layout: page
+title: Skills & Experience
+permalink: /skills-experience
 ---
