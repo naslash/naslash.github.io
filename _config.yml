@@ -10,7 +10,7 @@ permalink:           /:title
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "Portfolio"
+title:		           "My Portfolio"
 description:	       "a collection of personal and professional projects"
 author:              "Adam Nasla"
 
