@@ -27,9 +27,9 @@ My name is Adam Nasla. While I earned my B.S. in Computer Science in May 2026, m
     - For many course projects, I went beyond the course requirements by adding features, optimizing code, refactoring, and expanding functionality. These projects include TCP/IP networking, data analysis with Apache Hadoop MapReduce and Apache Spark, multithreaded programming, and more, all of which are showcased in the [Projects](/pages/projects.md) section.
 
 ## What I'm doing now
-- I'm currently seeking a full-time software engineering position.
-    
-    - Through my degree, personal projects, and freelance work, I've gained valuable experience that has prepared me well for a professional software engineering role. I'm excited to take on new challenges while continuing to grow as an engineer.
+- Currently seeking a full-time software engineering position.
+
+    - Through my degree, personal projects, and freelance work, I've gained valuable experience that has prepared me well for a professional software engineering role. I'm excited to take on new challenges and continue growing as an engineer.
 
 - Building a personal C++ static library to streamline audio plug-in development with the JUCE framework. At the moment, it consists primarily of custom GUI components such as buttons, sliders, and audio mixer components (fader, pan, channel), but the plan is to also include DSP components as well as more complex GUI components such as equalizers.
 
@@ -37,8 +37,17 @@ My name is Adam Nasla. While I earned my B.S. in Computer Science in May 2026, m
 
     - I plan to use this library to redevelop many of my early projects as previously explained under [What I've done](#what-ive-done), including the drum sample library plug-in.
 
-- I'm reviewing calculus and linear algebra to fill in gaps and further solidify my understanding.
+- Reviewing calculus and linear algebra to fill in gaps and further solidify my understanding.
 
 - Expanding my experience developing in a Linux environment.
 
 ## What I'm most proud of
+- I independently developed a fully functional drum sample library plug-in for Digital Audio Workstations (DAWs) intended to compete in the professional audio production market. It's a virtual drummer that reads MIDI notes and plays the corresponding audio files.
+
+    - In 2017, I developed an approach for combining the drum sample recording process with the plug-in's playback engine to produce the most human-sounding performance possible. Since cymbals were often the least convincing part of drum sample libraries, I also designed a solution to address that challenge.
+
+    - I personally directed the drum sample recording sessions in professional recording studios to ensure the samples met my design specifications.
+
+    - During testing, many audio producers and professional drummers described the performances as sounding virtually indistinguishable from those of a human drummer.
+
+    - This project advanced to the point where I was in the process of finalizing a distribution agreement, but it ultimately didn't move forward. Because of this, I'm unable to showcase the plug-in in action, as the recorded drum samples were exclusive to that agreement. However, I plan to personally fund new drum recording sessions so I can demonstrate the plug-in's performance without any licensing restrictions.

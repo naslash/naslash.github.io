@@ -101,6 +101,7 @@ The final row contains the cumulative totals for each column (except for message
 [![start](/assets/img/start-5000.png)](/assets/img/start-5000.png)
 
 As shown in the output above, all three conditions for correctness, as previously described [here](#description), are satisfied.
+
 1. The total number of messages sent is equal across all MessagingNodes at 25,000 sent messages each.
 
 2. The cumulative sum of total sent messages across all MessagingNodes is equal to the cumulative sum of total received messages across all MessagingNodes, which is 250,000.
