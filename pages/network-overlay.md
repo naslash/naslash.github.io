@@ -28,7 +28,9 @@ After all MSTs have been constructed, the MessagingNodes are ready to begin send
 Once all messaging rounds have completed, the server outputs summary statistics from each node which is used to verify that all rounds of messages have been correctly sent and received based on the following observations:
 
 1. The total number of messages sent by each node must be identical. This is because each node must send 5 messages per round.
+
 2. The cumulative sum of sent messages across the set of all nodes must match the cumulative sum of received messages across the set of all nodes. The number of messages received for each node differs since the receiving node is chosen at random.
+
 3. The cumulative sum of payload values (integers) sent across all nodes must match the cumulative sum of received payloads across the set of all nodes.
 
 These properties can be observed in the [Results](#results) section below.
@@ -100,7 +102,9 @@ The final row contains the cumulative totals for each column (except for message
 
 As shown in the output above, all three conditions for correctness, as previously described [here](#description), are satisfied.
 1. The total number of messages sent is equal across all MessagingNodes at 25,000 sent messages each.
+
 2. The cumulative sum of total sent messages across all MessagingNodes is equal to the cumulative sum of total received messages across all MessagingNodes, which is 250,000.
+
 3. The cumulative sum of sent integer payloads across all MessagingNodes is equal to the cumulative sum of received integer payloads across all MessagingNodes, which is 921,216,498,979.00.
 
 ## Optimization
@@ -110,8 +114,11 @@ The whole ```start``` process initially took minutes to complete, but I managed 
 The process consists of four separate tasks that involve sending and/or receiving [wire formats](#wire-formats) throughout the overlay. Because these operations require synchronization, I defined a dedicated ```synchronized``` method for each one. This allows the operations to execute independently while still maintaining thread safety. These methods are:
 
 - In MessagingNode, ```synchronized void sendMessages(String[] route)``` sends five messages to the next node in the specified route, where they are then relayed to their destination at the end of the route. A destination node is chosen at random from a HashMap that holds the route to each node in the minimum spanning tree.
+
 - In MessagingNode, ```synchronized void processPayload(String[] route, int payload)``` handles incoming payloads by either relaying them to the next node in the route, or adding the payload integer value to the receiving node's cumulative total if the current node is the destination.
+
 - In the Registry, ```synchronized void nodeTaskComplete()``` processes the received TASK_COMPLETE [wire formats](#wire-formats) sent by each MessagingNode after completing their last round of messages. Once every MessagingNode has reported completion, this method first calls ```sleep()``` on the thread for 500 milliseconds to ensure all payloads have reached their destinations, and then sends a PULL_TRAFFIC_SUMMARY [wire format](#wire-formats) to request a traffic summary from each MessagingNode.
+
 - In the Registry, ```synchronized void addTrafficSummary(String nodeID)``` processes the received TRAFFIC_SUMMARY [wire formats](#wire-formats) sent by each MessagingNode, and after processing the last one, it prints a summary report of all nodes as shown [above](#results).
 
 Once a TASK_INITIATE wire format is received by a MessagingNode, ```sendPayload()``` (screenshot below) is called to execute the message sending process, which is where the synchronized ```sendMessages(String[] route)``` method is called. After completing the final round, a TASK_COMPLETE [wire format](#wire-formats) is sent to the Registry, which executes its synchronized ```nodeTaskComplete()```.
