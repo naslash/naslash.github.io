@@ -6,3 +6,5 @@ permalink: /projects
 
 
 <span style="font-size: 20px;">[TCP/IP Network Overlay in Java](/network-overlay)</span>
+
+<span style="font-size: 20px;">[Thread Pools and Synchronization in Java](/threadpool)</span>
