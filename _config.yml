@@ -11,7 +11,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "My Portfolio"
-description:	       "a collection of personal and professional projects"
+description:	       "a collection of software engineering projects"
 author:              "Adam Nasla"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
