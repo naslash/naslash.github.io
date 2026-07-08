@@ -4,7 +4,6 @@ title: About Me
 permalink: /aboutme
 ---
 
-## Background
 I earned my B.S. in Computer Science in May 2026, but my experience in software development dates back to my self-taught years. I began learning C++ in 2016, and before long I developed an almost insatiable hunger to learn more. As my skills grew, I found myself creating simple programs and taking on increasingly challenging projects. Through that process, I discovered what it truly means to be passionate about something. It's the willingness to face any challenge, no matter how big or complex, and the determination to push through it. It's also the curiosity that continuously drives me to learn more and grow as a software engineer. Finally, it's what makes this journey both fulfilling and rewarding.
 
 ## What I've done
