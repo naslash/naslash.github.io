@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Machine Learning: Predicting Fantasy Points using Polynomial Regression"
+title: "Machine Learning: Predicting Fantasy Points Using Polynomial Regression"
 permalink: /polyreg
 ---
 
