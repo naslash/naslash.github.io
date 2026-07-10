@@ -17,13 +17,13 @@ I earned my B.S. in Computer Science in May 2026, but my experience in software 
 
         - The drum sample library plug-in was my most ambitious project and remains the one I'm most proud of. It's a virtual drummer that reads MIDI notes and plays the corresponding audio files. In 2017, I wanted to create something that could compete in the drum sample library market, which meant it had to sound as human as possible. At the time, cymbals were especially notorious for sounding robotic, so I developed a concept that solved that problem. I describe this project in more detail [below](#what-im-most-proud-of).
 
-    - I began doing freelance work on audio software in 2020, though it remained fairly limited until I joined Spectre Digital as a freelance developer in 2023. More details available in the [Skills & Experience](/pages/experience.md) section.
+    - I began doing freelance work on audio software in 2020, though it remained fairly limited until I joined Spectre Digital as a freelance developer in 2023. More details available in the [Skills & Experience](/skills-experience.md) section.
 
 - I began focusing more heavily on Java and Python in 2023 when I started my undergraduate studies in Computer Science at Colorado State University. During my studies, I also gained experience with RESTful APIs, integration and unit testing, distributed systems, operating systems, and computer architecture.
 
     - My previous software development experience enriched my undergraduate experience far more than I anticipated. Because I was already proficient in object-oriented programming and familiar with several related concepts, I was able to strengthen my understanding where needed while also spending more time exploring new concepts, technologies, and frameworks.
     
-    - For many course projects, I went beyond the course requirements by adding features, optimizing code, refactoring, and expanding functionality. These projects include TCP/IP networking, data analysis with Apache Hadoop MapReduce and Apache Spark, multithreaded programming, and more, all of which are showcased in the [Projects](/pages/projects.md) section.
+    - For many course projects, I went beyond the course requirements by adding features, optimizing code, refactoring, and expanding functionality. These projects include TCP/IP networking, data analysis with Apache Hadoop MapReduce and Apache Spark, multithreaded programming, and more, all of which are showcased in the [Projects](/projects.md) section.
 
 ## What I'm doing now
 - Currently seeking a full-time software engineering position.
