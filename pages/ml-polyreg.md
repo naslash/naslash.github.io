@@ -5,6 +5,7 @@ permalink: /polyreg
 ---
 
 For this project, I use a *polynomial regression* model to predict a player's fantasy football points. To predict fantasy points before a game is played, a model would first need to predict the player's individual statistics, such as passing yards, rushing touchdowns, and receptions. Instead, this model uses the actual statistics as input to predict the final fantasy point total. While this is a simpler prediction task, my primary goal is to build a strong understanding of the fundamentals since this is my first machine learning project. This approach also makes it easier to validate the model's predictions against the known fantasy point totals.
+<br><br>
 
 ## About the data
 The data was collected from Sports Reference, which provides comprehensive historical football statistics. Much of the statistical data is compiled from official sources, including the NFL. This project uses NFL player statistics from 2012---2023 for training and evaluates the model using the official 2024 statistics, which remain unseen during training, to measure how accurately it predicts fantasy points.
@@ -12,9 +13,11 @@ The data was collected from Sports Reference, which provides comprehensive histo
 I wrote a Python script to scrape the required data, clean it, and merge it into a *CSV* file. For scraping, I use BeautifulSoup to extract player data for the selected features and positions. Only offensive positions are included: quarterback, running back, wide receiver, tight end, and fullback. The *position* feature has been one-hot encoded since all four are merged into the same dataset.
 
 The extracted features include: player name, position, age, games played, games started, passes completed, passing yards, passing touchdowns, interceptions thrown, rushing attempts, rushing yards gained, rushing touchdowns, receptions, receiving yards, receiving touchdowns, fumbles lost, and fantasy points.
+<br><br>
 
 ## Model Description
 A *polynomial regression* model was trained and evaluated using the collected data. The model was tested using polynomial degrees of 2, 3, 4, and 5. Performance on the training and testing sets was compared to detect overfitting or underfitting. Model performance was measured using the *Root Mean Squared Error* (RMSE). I also used scikit-learn's `cross_val_score` function to determine the optimal polynomial degree and evaluated a *ridge regression* model to determine whether regularization could improve performance.
+<br><br>
 
 ## Training and Validating
 The table below displays the initial *RMSE* values for each polynomial degree. The best performance is achieved with a polynomial degree of 2, and higher degrees begin to exhibit overfitting.
