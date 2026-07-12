@@ -5,6 +5,7 @@ permalink: /skills-experience
 
 ## <u>SUMMARY</u>
 Software engineer with 2+ years of professional freelance experience and 6+ years building software through personal and academic projects. Proficient in C++ (6+ years), Java (3+ years) and Python (3+ years), with end-to-end experience spanning design, implementation, testing, and performance optimization. Hold a B.S. in Computer Science (GPA: 3.9) with additional experience in RESTful APIs, machine learning, and Agile team workflows.
+<br><br>
 
 ## <u>SKILLS</u>
 **Programming Languages:** C++, Java, Python, SQL
@@ -14,14 +15,16 @@ Software engineer with 2+ years of professional freelance experience and 6+ year
 **Concepts & Practices:** Machine/Deep Learning, Testing/Debugging, UI/UX Engineering, Multithreaded programming, Agile, Computer Architecture, Performance Optimization
 
 **Soft Skills:** Visual-Spatial reasoning, Problem-solving, Adaptable, Attention to detail, Teamwork, Communicating tech concepts
+<br><br>
 
 ## <u>EDUCATION</u>
-**Colorado State University**
-B.S. Computer Science,      May 2026
+**Colorado State University**  
+*B.S. Computer Science*&emsp;&emsp;May 2026  
 GPA: 3.9
 
-**California State Polytechnic University Pomona**
-B.A. Political Science,     April 2014
+**California State Polytechnic University Pomona**  
+*B.A. Political Science*&emsp;&emsp;&ensp;April 2014
+<br><br>
 
 ## <u>WORK</u>
 **Freelance Contract**&emsp;&emsp;&emsp;2023 – 2025  
@@ -31,9 +34,10 @@ B.A. Political Science,     April 2014
 - Designed and implemented an undo/redo system managing complete application state for Element Bass.
 - Delivered updates resolving multiple UI/UX bugs including preset selection, save, and save-as functionality.
 - Developed across AU, VST, and AAX plug-in formats for DAW applications.
+<br><br>
 
 ## <u>PROJECTS</u>
-**Virtual Drummer Sample Library**
+**Virtual Drummer Sample Library** (more details [here](/aboutme#what-im-most-proud-of))
 - Designed and built a complete virtual instrument plug-in for DAW applications in C++ using the JUCE framework, including a sample playback engine and full UI/UX.
 - Conducted and managed professional studio drum sample recordings to achieve realistic, human-sounding playback; engineered the instrument specifically to replicate natural human feel.
 

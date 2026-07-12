@@ -5,15 +5,16 @@ permalink: /network-overlay
 ---
 
 I constructed a logical network overlay for a distributed set of nodes (servers/clients). Each node builds a minimum spanning tree (MST) used to route messages encoded as wire format packets throughout the distributed system.
+<br><br>
 
 ## Description
-The Registry node hosts the main server to which all MessagingNodes (clients) connect to register their ip addresses and port numbers. This process is initiated with the following commands:
+The Registry node hosts the main server to which all MessagingNodes (clients) connect to register their IP addresses and port numbers. This process is initiated with the following commands:
 
 `java csx55.overlay.node.Registry <registry-port>` starts a server on the specified port.
 
 `java csx55.overlay.node.MessagingNode <registry-host> <registry-port>` connects a MessagingNode (client) to the Registry, where it is registered.
 
-This is illustrated in the following screenshot. The Registry node (bottom-right), named Tokyo, creates a server socket on port 5000, then each MessagingNode connects to Tokyo's server on port 5000 and registered:
+This is illustrated in the following screenshot. The Registry node (bottom-right), named Tokyo, creates a server socket on port 5000, then each MessagingNode connects to Tokyo's server on port 5000 and register:
 
 (Click image to enlarge)
 [![nodes-registered](/assets/img/all-nodes-registered.png)](/assets/img/all-nodes-registered.png)
@@ -31,6 +32,7 @@ Once all messaging rounds have completed, the server outputs summary statistics 
 3. The cumulative sum of payload values (integers) sent across all nodes must match the cumulative sum of received payloads across the set of all nodes.
 
 These properties can be observed in the [Results](#results) section below.
+<br><br>
 
 ## Terminal Commands
 
@@ -42,7 +44,7 @@ Once all MessagingNodes have connected to the Registry and completed registratio
 
 [![list-nodes](/assets/img/list-messaging-nodes.png)](/assets/img/list-messaging-nodes.png)
 
-`setup-overlay <number-of-connections>` : This command instructs the Registry to construct the network overlay. This is achieved by connecting each node to *number-of-connections* other nodes, then assigning each link a random weight between 1 and 10. The Registry then sends wire formats to each MessagingNode containing the list of peer nodes to which each MessagingNode should connect.
+`setup-overlay <number-of-connections>` : This command instructs the Registry to construct the network overlay. This is achieved by connecting each node to *&lt;number-of-connections&gt;* other nodes, then assigning each link a random weight between 1 and 10. The Registry then sends wire formats to each MessagingNode containing the list of peer nodes to which each MessagingNode should connect.
 
 [![setup-overlay](/assets/img/setup-overlay-ser.png)](/assets/img/setup-overlay-ser.png)
 
@@ -54,7 +56,7 @@ Once all MessagingNodes have connected to the Registry and completed registratio
 
 [![send-weights](/assets/img/send-overlay-link-weights.png)](/assets/img/send-overlay-link-weights.png)
 
-`start <number-of-rounds>` : This command initiates message exchange among all nodes in the overlay. Each node sends five messages to a randomly selected node for the specified number of rounds. See [results](#results) below.
+`start <number-of-rounds>` : This command initiates message exchange among all nodes in the overlay. Each node sends five messages to a randomly selected node for the specified *&lt;number-of-rounds&gt;*. See [results](#results) below.
 
 #### Client commands:
 
@@ -63,6 +65,7 @@ Once all MessagingNodes have connected to the Registry and completed registratio
 [![mst](/assets/img/print-mst.png)](/assets/img/print-mst.png)
 
 `exit-overlay` : The MessagingNode first sends a deregistration request (explained [below](#wire-formats)) to the Registry, then exits after receiving confirmation from the Registry.
+<br><br>
 
 ## Wire Formats
 
@@ -87,6 +90,7 @@ The following wire formats (encoded byte streams) are sent and received between 
 **PULL_TRAFFIC_SUMMARY:** This is sent to all registered nodes by the Registry once it receives all TASK_COMPLETE messages from them. This requests that each MessagingNode send its traffic summary back to the Registry.
 
 **TRAFFIC_SUMMARY:** Upon receiving the PULL_TRAFFIC_SUMMARY request from the Registry, each MessagingNode responds with a summary of its traffic, which includes the number of messages sent, received, and relayed. Since each MESSAGE's payload is an integer, the summary also includes the cumulative totals of sent and received payload values.
+<br><br>
 
 ## Results
 
@@ -104,6 +108,7 @@ As shown in the output above, all three conditions for correctness, as previousl
 2. The cumulative sum of total sent messages across all MessagingNodes is equal to the cumulative sum of total received messages across all MessagingNodes, which is 250,000.
 
 3. The cumulative sum of sent integer payloads across all MessagingNodes is equal to the cumulative sum of received integer payloads across all MessagingNodes, which is 921,216,498,979.00.
+<br><br>
 
 ## Optimization
 
