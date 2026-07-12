@@ -16,7 +16,7 @@ I earned my B.S. in Computer Science in May 2026, but my experience in software 
 
         - Since many of these projects were created early in my learning journey, they aren't currently posted in my Projects section. As explained [below](#what-im-doing-now), I'm redeveloping many of them and will publish them once they're complete.
 
-        - The drum sample library plug-in was my most ambitious project and remains the one I'm most proud of. It's a virtual drummer that reads MIDI notes and plays the corresponding audio files. In 2017, I wanted to create something that could compete in the drum sample library market, which meant it had to sound as human as possible. At the time, cymbals were especially notorious for sounding robotic, so I developed a concept that solved that problem. I describe this project in more detail [below](#what-im-most-proud-of).
+        - The drum sample library plug-in was my most ambitious project and remains the one I'm most proud of. It's a virtual drummer that reads MIDI notes and plays the corresponding audio files. More on this project [below](#what-im-most-proud-of).
 
     - Began doing freelance work on audio software in 2020, though it remained fairly limited until I joined Spectre Digital as a freelance developer in 2023. More details available in the [Skills & Experience](/skills-experience) section.
 
