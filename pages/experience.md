@@ -8,11 +8,11 @@ Software engineer with 2+ years of professional freelance experience and 6+ year
 <br><br>
 
 ## <u>SKILLS</u>
-**Programming Languages:** C++, Java, Python, SQL
+**Programming Languages:** C/C++, Java, Python, SQL
 
 **Technologies & Frameworks:** TCP/IP Networking, Hadoop/MapReduce, Spark, JUCE, RESTful APIs, Postman, JUnit, PyTorch, NumPy
 
-**Concepts & Practices:** Machine/Deep Learning, Testing/Debugging, UI/UX Engineering, Multithreaded programming, Agile, Computer Architecture, Performance Optimization
+**Concepts & Practices:** Audio DSP, Testing/Debugging, UI/UX Engineering, Multithreaded programming, Machine/Deep Learning, Agile, Computer Architecture, Performance Optimization
 
 **Soft Skills:** Visual-Spatial reasoning, Problem-solving, Adaptable, Attention to detail, Teamwork, Communicating tech concepts
 <br><br>
@@ -37,6 +37,10 @@ GPA: 3.9
 <br><br>
 
 ## <u>PROJECTS</u>
+**JUCE C++ Static Library**
+- Building a reusable C++ static library for the JUCE framework to accelerate audio plug-in development across projects.
+- Implementing GUI components ranging from simple controls (buttons, knobs, sliders) to complex modules including an audio mixer, EQ, and preset menu, with planned DSP modules.
+
 **Virtual Drummer Sample Library** (more details [here](/aboutme#what-im-most-proud-of))
 - Designed and built a complete virtual instrument plug-in for DAW applications in C++ using the JUCE framework, including a sample playback engine and full UI/UX.
 - Conducted and managed professional studio drum sample recordings to achieve realistic, human-sounding playback; engineered the instrument specifically to replicate natural human feel.
@@ -47,4 +51,4 @@ GPA: 3.9
 **Machine Learning Projects**
 - Built multiple machine learning projects in Python using Spyder and Jupyter, including a web data scraping script, a Polynomial Regression model to predict fantasy football points, and a GPT-style decoder-only Transformer language model for simple children's stories.
 
-The machine learning projects, along with many other projects, are showcased in the [**Projects**](/projects) section of this portfolio.
+The C++ static library, machine learning, and other projects are showcased in the [**Projects**](/projects) section of this portfolio.
