@@ -4,10 +4,14 @@ title: Projects
 permalink: /projects
 ---
 
-<span style="font-size: 20px;">[TCP/IP Network Overlay in Java](/network-overlay)</span>
+The following projects are maintained in private Git repositories. I'm happy to share access with potential employers upon request.
 
-<span style="font-size: 20px;">[Thread Pools and Synchronization in Java](/threadpool)</span>
+[<span style="font-size: 20px; color: #3760b8;">TCP/IP Network Overlay in Java</span>](/network-overlay)
 
-<span style="font-size: 20px;">[Machine Learning: Polynomial Regression](/polyreg)</span>
+[<span style="font-size: 20px; color: #3760b8;">Thread Pools and Synchronization in Java</span>](/threadpool)
 
-<span style="font-size: 20px;">[Deep Learning: Mini GPT-Style Decoder-Only Transformer](/dlgpt)</span>
+[<span style="font-size: 20px; color: #3760b8;">Machine Learning: Polynomial Regression</span>](/polyreg)
+
+[<span style="font-size: 20px; color: #3760b8;">Deep Learning: Mini GPT-Style Decoder-Only Transformer</span>](/dlgpt)
+
+[<span style="font-size: 20px; color: #3760b8;">JUCE Static Library in C++</span>](/static-lib)
