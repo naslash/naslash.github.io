@@ -18,7 +18,9 @@ For the audio DSP portion, the current plan is to develop DSP modules that compl
 
 ## UI Examples
 
-The following are examples of individual UI components created using art assets purchased from UI Mother.
+Video examples coming soon.
+
+I'm working on showcasing the UI portion of my static library. For the art assets, I'm using UI kits purchased from UI Mother, and I'm currently finishing up an example using their Neptune kit. I've only got a few more things to finish up in my static library, and I should have the Neptune example up soon.
 
 
 <!-- <video autoplay muted loop playsinline width="100">
