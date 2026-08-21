@@ -46,7 +46,7 @@ I earned my B.S. in Computer Science in May 2026, but my experience in software 
 ## What I'm most proud of
 - I independently developed a fully functional drum sample library plug-in for Digital Audio Workstations (DAWs) designed to compete in the professional audio production market. It's a virtual drummer that reads MIDI notes and plays the corresponding audio files.
 
-    - In 2017, I developed an approach for combining the drum sample recording process with the plug-in's playback engine to produce the most human-sounding performance possible. Since cymbals were often the least convincing part of drum sample libraries, I also designed a solution to address that challenge.
+    - I developed an approach for combining the drum sample recording process with the plug-in's playback engine to produce the most human-sounding performance possible. Since cymbals were often the least convincing part of drum sample libraries, I also designed a solution to address that challenge.
 
     - I directed the drum sample recording sessions in professional studios and completed all sample editing, ensuring the final samples met my design specifications.
 
