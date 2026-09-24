@@ -18,11 +18,18 @@ For the audio DSP portion, the current plan is to develop DSP modules that compl
 
 ## UI Examples
 
-Video examples coming soon.
+The following videos showcase different UI examples using art assets purchased from UI Mother.
 
-I'm working on showcasing the UI portion of my static library. For the art assets, I'm using UI kits purchased from UI Mother, and I'm currently finishing up an example using their Neptune kit. I've only got a few more things to finish up in my static library, and I should have the Neptune example up soon.
+### Neptune:
 
+Animation total frames:
 
-<!-- <video autoplay muted loop playsinline width="100">
-    <source src="/assets/vds/fader-test.mov" type="video/mp4">
-</video> -->
+Big Knob: 257 frames&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Vertical Slider: 129 frames  
+Medium Knob: 129 frames&emsp;&emsp;&emsp;&emsp;&emsp;Horizontal Slider: 129 frames  
+Small Knob: 129 frames&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Wheel: 129 frames    
+
+<video controls preload="metadata" width="500">
+    <source src="/assets/vds/Neptune-Vid.mp4" type="video/mp4">
+</video>
+
+(More video examples coming soon)
